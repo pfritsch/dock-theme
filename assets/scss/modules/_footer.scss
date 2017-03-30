@@ -1,0 +1,66 @@
+.footer-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background: $black;
+
+  font-size: rem-calc(13);
+  color: white;
+  line-height: rem-calc(24);
+  // margin-top: rem-calc(60);
+
+  a:not(.button) {
+    color: white;
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+  }
+  h6 {
+    margin: 0;
+    line-height: rem-calc(24);
+  }
+
+  .footer {
+    overflow: hidden;
+    @include grid-column(12);
+    @include breakpoint(medium) {
+      @include grid-column(10);
+      @include grid-column-offset(1);
+    }
+
+    @include breakpoint(large) {
+      @include grid-column(8);
+      @include grid-column-offset(2);
+    }
+
+    padding: rem-calc(30) 0;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .widget {
+    text-align: center;
+    padding-left: rem-calc(12);
+    &:last-child {
+      margin-top: rem-calc(24);
+    }
+    @include breakpoint(large) {
+      text-align: left;
+      float: left;
+      padding-right: rem-calc(12);
+      padding-left: 0;
+      &:last-child {
+        float: right;
+        margin-top: 0;
+      }
+    }
+    @include breakpoint(xlarge) {
+      padding-right: 0;
+      margin-left: rem-calc(42);
+    }
+  }
+}

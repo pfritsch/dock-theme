@@ -1,0 +1,46 @@
+.main-content {
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column(10);
+    @include grid-column-offset(1);
+  }
+  @include breakpoint(large) {
+    @include grid-column(8);
+    @include grid-column-offset(2);
+  }
+}
+// Fixes
+.off-canvas-wrapper {
+  background-color: white;
+  position: relative;
+}
+.off-canvas-wrapper-inner {
+  position: relative;
+}
+.page-template-default,
+.page-template-front,
+.projet-template-default,
+.post-template-default,
+.archive {
+  .off-canvas-wrapper::before {
+    @include breakpoint(xlarge) {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      background: $light-gray;
+      z-index: 0;
+      margin-left: -270px;
+    }
+  }
+}
+.mce-content-body {
+    background: white;
+}
+p.p1 a {
+  text-decoration: underline;
+}

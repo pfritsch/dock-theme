@@ -1,0 +1,22 @@
+.sites-button {
+  background: #FF6908;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+  border: none;
+}
+.footer .button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: rem-calc(12);
+  line-height: rem-calc(24);
+  padding: rem-calc(12 24);
+  border: none;
+  margin: 0;
+}
+.button-facebook {
+  display: inline-block;
+  margin-top: rem-calc(10);
+  transition: color 300ms ease;
+}

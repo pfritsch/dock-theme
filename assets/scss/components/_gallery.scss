@@ -1,0 +1,22 @@
+.gallery {
+  @include breakpoint(xlarge) {
+    // display: flex;
+    // flex-flow: column wrap;
+    margin-top: rem-calc(60);
+    width: rem-calc(672);
+    margin-left: rem-calc(-132);
+  }
+}
+.gallery-item {
+  background-color: #eee;
+  display: inline-block;
+  margin: rem-calc(0 0 24 0);
+
+  @include breakpoint(xlarge) {
+    max-width: 100%;
+    margin: rem-calc(0 0 24 24);
+    & > .portrait {
+      max-width: rem-calc(312);
+    }
+  }
+}

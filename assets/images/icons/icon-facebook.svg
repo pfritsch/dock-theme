@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-223.000000, -61.000000)" fill-rule="nonzero" fill="#F0F1F2">
+            <g id="Group-4">
+                <g id="logo-circle-facebook.2.3.1" transform="translate(222.000000, 60.000000)">
+                    <g id="Group">
+                        <g id="Filled_Icons" transform="translate(1.000000, 1.000000)">
+                            <path d="M11.5,0 C5.15870833,0 0,5.15870833 0,11.5 C0,17.8412917 5.15870833,23 11.5,23 C17.8412917,23 23,17.8412917 23,11.5 C23,5.15870833 17.8412917,0 11.5,0 Z M14.9452083,11.0208333 L12.9375,11.0208333 L12.9375,17.7291667 L10.0625,17.7291667 L10.0625,11.0208333 L8.14583333,11.0208333 L8.14583333,9.10416667 L10.0625,9.10416667 L10.0625,7.98866667 C10.0625,6.9345 10.3998333,5.287125 12.601125,5.287125 L14.8541667,5.29383333 L14.8541667,7.50375 L13.5048333,7.50375 C13.271,7.50375 12.9375,7.621625 12.9375,8.12379167 L12.9375,9.10416667 L15.1790417,9.10416667 L14.9452083,11.0208333 Z" id="icon-facebook"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+.team-container {
+  background: #F0F1F3;
+}
+.team {
+  padding-top: rem-calc(24);
+}
+.team-name {
+  font-size: rem-calc(32);
+  font-weight: normal;
+}
+.team-member {
+  margin: rem-calc(48 0);
+}
+.team-content {
+  @include breakpoint(xlarge) {
+    float: right;
+    width: 60%;
+  }
+}
+.team-photo {
+  @include breakpoint(xlarge) {
+    margin-left: rem-calc(-120);
+    float: left;
+  }
+}
+.team-works {
+  display: block;
+  min-height: rem-calc(360);
+  background: url('../images/team-works.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding-top: rem-calc(156);
+
+  .button {
+    color: white;
+    border-color: white;
+    transition: all 300ms ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem-calc(12);
+    line-height: rem-calc(24);
+    padding: rem-calc(11 23);
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+}
