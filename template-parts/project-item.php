@@ -4,7 +4,7 @@
     $alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
     ?>
     <a href="<?php the_permalink(); ?>" class="post-thumbnail">
-      <img data-interchange="[<?php echo the_post_thumbnail_url('fp-medium'); ?>, small], [<?php echo the_post_thumbnail_url('fp-large'); ?>, medium]" alt="<?php echo esc_attr( $alt );?>" />
+      <img src="<?php echo the_post_thumbnail_url('fp-small'); ?>" data-interchange="[<?php echo the_post_thumbnail_url('fp-medium'); ?>, small], [<?php echo the_post_thumbnail_url('fp-large'); ?>, medium]" alt="<?php echo esc_attr( $alt );?>" />
       <noscript><img src="<?php echo the_post_thumbnail_url('fp-large'); ?>" alt="<?php echo esc_attr( $alt );?>" /></noscript>
     </a>
   <?php endif; ?>

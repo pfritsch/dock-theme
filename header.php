@@ -20,7 +20,7 @@
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<div class="hide">
-		<?php get_template_part( 'assets/images/icons' ); ?>
+		<?php echo file_get_contents( get_stylesheet_directory_uri() . '/assets/images/icons.svg' ); ?>
 	</div>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>

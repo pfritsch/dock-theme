@@ -147,7 +147,6 @@ gulp.task('svgstore', function () {
       }
     }))
     .pipe(svgstore())
-    .pipe(ext_replace('.php'))
     .pipe(gulp.dest('assets/images'));
 });
 

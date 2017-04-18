@@ -18,6 +18,7 @@
   }
 }
 .team-photo {
+  opacity: 0.7;
   @include breakpoint(xlarge) {
     margin-left: rem-calc(-120);
     float: left;

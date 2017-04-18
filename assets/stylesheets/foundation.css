@@ -7884,10 +7884,12 @@ p.p1 a {
     float: right;
     width: 60%; } }
 
-@media screen and (min-width: 62.25em) {
-  .team-photo {
-    margin-left: -7.5rem;
-    float: left; } }
+.team-photo {
+  opacity: 0.7; }
+  @media screen and (min-width: 62.25em) {
+    .team-photo {
+      margin-left: -7.5rem;
+      float: left; } }
 
 .team-works {
   display: block;
@@ -7911,6 +7913,97 @@ p.p1 a {
     .team-works .button:hover, .team-works .button:focus {
       color: #8DA416;
       border-color: #8DA416; }
+
+.contact-container {
+  background: #F0F1F3; }
+  .contact-container > .row {
+    position: relative; }
+
+.contact {
+  padding-top: 1.5rem;
+  text-align: center; }
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  margin: 3rem 0 6rem; }
+
+.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  list-style: none;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem; }
+  @media screen and (min-width: 62.25em) {
+    .contact-list {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; } }
+
+.contact-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 3rem 0.75rem 0; }
+  .contact-item a {
+    display: block; }
+  .contact-item .icon {
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1);
+    transition: -webkit-transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1);
+    transition: transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1);
+    transition: transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1), -webkit-transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  .contact-item a:hover .icon {
+    -webkit-transform: scale3d(1.25, 1.25, 1.25);
+            transform: scale3d(1.25, 1.25, 1.25); }
+
+.contact-item-category {
+  display: inline-block;
+  margin-top: 0.75rem;
+  text-transform: uppercase; }
+
+.contact-map {
+  display: block;
+  min-height: 25rem;
+  background: #5A5F60; }
+
+.contact-portrait {
+  max-width: 50%;
+  opacity: 0.7;
+  z-index: 0; }
+  @media print, screen and (min-width: 28.5em) {
+    .contact-portrait {
+      position: absolute;
+      bottom: 0; } }
+  .contact-portrait.is-leo {
+    float: left;
+    margin-left: -2.25rem; }
+    @media print, screen and (min-width: 28.5em) {
+      .contact-portrait.is-leo {
+        float: none;
+        left: 0;
+        margin-left: -23%; } }
+    @media print, screen and (min-width: 42em) {
+      .contact-portrait.is-leo {
+        margin-left: -20%; } }
+  .contact-portrait.is-sylvain {
+    float: right;
+    margin-right: -3rem; }
+    @media print, screen and (min-width: 28.5em) {
+      .contact-portrait.is-sylvain {
+        float: none;
+        right: 0;
+        margin-right: -28%; } }
+    @media print, screen and (min-width: 42em) {
+      .contact-portrait.is-sylvain {
+        margin-right: -25%; } }
 
 .row-show {
   background: rgba(255, 0, 0, 0.1);
