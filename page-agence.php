@@ -14,10 +14,12 @@ get_header(); ?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
+<?php do_action( 'foundationpress_before_content' ); ?>
+<?php if(have_posts()):
+	while ( have_posts() ) : the_post();
+	if (!empty_content(get_the_content())): ?>
   <main id="page" role="main" class="row">
     <div class="main-content">
-     <?php do_action( 'foundationpress_before_content' ); ?>
-     <?php while ( have_posts() ) : the_post(); ?>
        <article <?php post_class('page-content') ?> id="post-<?php the_ID(); ?>">
            <header class="show-for-sr">
                <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -35,26 +37,29 @@ get_header(); ?>
            <?php comments_template(); ?>
            <?php do_action( 'foundationpress_page_after_comments' ); ?>
        </article>
-     <?php endwhile;?>
-
-     <?php do_action( 'foundationpress_after_content' ); ?>
-     <?php // get_sidebar(); ?>
     </div>
-
   </main>
+	<?php endif;
+ endwhile;
+endif; ?>
+<?php do_action( 'foundationpress_after_content' ); ?>
+
 </section>
 <section class="container team-container">
   <div class="row">
     <div class="team main-content">
       <div class="team-content">
-        <article class="team-member">
+        <article class="team-member" data-member="leonard">
           <?php show_post('leonard-dosda'); ?>
         </article>
-        <article class="team-member">
+        <article class="team-member" data-member="sylvain">
           <?php show_post('sylvain-schreck'); ?>
         </article>
       </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team.jpg" width="360" height="589" alt="La team" class="team-photo" />
+			<div class="team-pictures">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-leo.jpg" width="170" height="589" alt="La team" class="team-photo" data-member="leonard" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-sylvain.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="sylvain"/>
+			</div>
     </div>
   </div>
 </section>

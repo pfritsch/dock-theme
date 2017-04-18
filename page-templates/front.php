@@ -6,12 +6,13 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<?php if(have_posts()): ?>
+<?php if(have_posts()):
+	while ( have_posts() ) : the_post();
+	if (!empty_content(get_the_content())): ?>
 	<main id="page" role="main">
 		<div class="row">
 			<div class="main-content">
 				<!-- Page content -->
-				<?php while ( have_posts() ) : the_post(); ?>
 					<section class="intro" role="main">
 						<div <?php post_class('page-content') ?> id="post-<?php the_ID(); ?>">
 							<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
@@ -27,11 +28,12 @@ get_header(); ?>
 							<?php do_action( 'foundationpress_page_after_comments' ); ?>
 						</div>
 					</section>
-				<?php endwhile; ?>
 			</div>
 		</div>
 	</main>
-<?php endif; ?>
+	<?php endif;
+ endwhile;
+endif; ?>
 
 <!-- Projects List -->
 <?php get_template_part( 'template-parts/projects-list' ); ?>

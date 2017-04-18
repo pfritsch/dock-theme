@@ -3450,7 +3450,7 @@ h5,
 h6 {
   font-family: "Nunito Sans", Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizeLegibility; }
   h1 small,
@@ -6961,14 +6961,8 @@ a.thumbnail {
   background-color: #73797a; }
 
 .top-bar {
-  padding: 6rem 0;
-  line-height: 0;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
-  -webkit-transition: -webkit-box-shadow 0;
-  transition: -webkit-box-shadow 0;
-  transition: box-shadow 0;
-  transition: box-shadow 0, -webkit-box-shadow 0; }
+  padding: 4.5rem 0;
+  line-height: 0; }
   .top-bar .menu a {
     text-transform: uppercase;
     font-weight: bold;
@@ -7036,7 +7030,7 @@ a.thumbnail {
   @media print, screen and (min-width: 28.5em) {
     .site-header {
       background: none;
-      min-height: 16.5rem; } }
+      min-height: 9.75rem; } }
 
 .site-header.is-sticky .top-bar {
   position: fixed;
@@ -7047,14 +7041,13 @@ a.thumbnail {
   padding: 0;
   background: white;
   z-index: 999;
-  -webkit-box-shadow: 0 0 3px rgba(30, 35, 36, 0.3);
-          box-shadow: 0 0 3px rgba(30, 35, 36, 0.3);
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s; }
+  opacity: 0.7;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
   .site-header.is-sticky .top-bar + * {
     padding-top: 125px; }
+  .site-header.is-sticky .top-bar:hover {
+    opacity: 0.95; }
 
 .site-header.is-sticky .logo #sda,
 .site-header.is-sticky .logo #schre,
@@ -7335,8 +7328,17 @@ body#tinymce {
     margin-left: 0; }
     @media screen and (min-width: 62.25em) {
       .portfolio-list .post-content {
-        margin-left: 16.66667%; }
-        .portfolio-list .post-content::after {
+        margin-left: 16.66667%; } }
+  .portfolio-list .post-title {
+    margin-bottom: 0; }
+    @media print, screen and (min-width: 42em) {
+      .portfolio-list .post-title {
+        margin-top: 0.75rem; } }
+    .portfolio-list .post-title a {
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease; }
+      @media screen and (min-width: 62.25em) {
+        .portfolio-list .post-title a::after {
           content: '';
           display: block;
           position: absolute;
@@ -7345,12 +7347,11 @@ body#tinymce {
           width: 7px;
           height: 7px;
           background: #B7BBBD;
-          border-radius: 50%; } }
-  .portfolio-list .post-title {
-    margin-bottom: 0; }
-    @media print, screen and (min-width: 42em) {
-      .portfolio-list .post-title {
-        margin-top: 0.75rem; } }
+          border-radius: 50%;
+          -webkit-transition: all 300ms ease;
+          transition: all 300ms ease; }
+        .portfolio-list .post-title a:hover::after {
+          background: #8DA416; } }
 
 .portfolio-grid {
   background: #E9EAEB;
@@ -7511,30 +7512,41 @@ body#tinymce {
     margin-left: 0; }
     @media screen and (min-width: 62.25em) {
       .news-list .post-content {
-        margin-left: 16.66667%; }
-        .news-list .post-content::after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 18px;
-          left: -57px;
-          width: 7px;
-          height: 7px;
-          background: #B7BBBD;
-          border-radius: 50%; } }
+        margin-left: 16.66667%; } }
   .news-list .post-title {
     margin-bottom: 0; }
   .news-list a {
-    display: block; }
+    display: block;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease; }
+    @media screen and (min-width: 62.25em) {
+      .news-list a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: -57px;
+        width: 7px;
+        height: 7px;
+        background: #B7BBBD;
+        border-radius: 50%;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease; }
+      .news-list a:hover::after {
+        background: #8DA416; } }
 
 .news-date {
   color: #B7BBBD; }
 
 @media screen and (min-width: 62.25em) {
-  .gallery {
+  .gallery,
+  .responsive-embed {
     margin-top: 3.75rem;
     width: 42rem;
     margin-left: -8.25rem; } }
+
+.responsive-embed {
+  min-height: 380px; }
 
 .gallery-item {
   background-color: #eee;
@@ -7776,7 +7788,7 @@ body#tinymce {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: 72px;
     bottom: 0;
     left: 50%;
     width: 1px;
@@ -7877,7 +7889,23 @@ p.p1 a {
   font-weight: normal; }
 
 .team-member {
-  margin: 3rem 0; }
+  margin: 2.25rem 0;
+  padding: 0.75rem 1.5rem; }
+  @media screen and (min-width: 62.25em) {
+    .team-member {
+      background: transparent;
+      -webkit-box-shadow: 0;
+              box-shadow: 0;
+      -webkit-transition: background 300ms ease;
+      transition: background 300ms ease; }
+      .team-member.is-hover {
+        background-color: white;
+        -webkit-transition: -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
+        transition: -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
+        transition: box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
+        transition: box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1), -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
+        -webkit-box-shadow: 1px 1px 6px rgba(30, 35, 36, 0.1);
+                box-shadow: 1px 1px 6px rgba(30, 35, 36, 0.1); } }
 
 @media screen and (min-width: 62.25em) {
   .team-content {
@@ -7885,20 +7913,30 @@ p.p1 a {
     width: 60%; } }
 
 .team-photo {
-  opacity: 0.7; }
+  opacity: 0.7;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease; }
   @media screen and (min-width: 62.25em) {
-    .team-photo {
+    .team-photo.is-hover {
+      opacity: 1; }
+    .team-photo[data-member="leonard"] {
       margin-left: -7.5rem;
+      float: left; }
+    .team-photo[data-member="sylvain"] {
       float: left; } }
+
+.team-pictures {
+  line-height: 0;
+  font-size: 0; }
 
 .team-works {
   display: block;
-  min-height: 22.5rem;
+  min-height: 15rem;
   background: url("../images/team-works.jpg") no-repeat center center;
   -webkit-background-size: cover;
           background-size: cover;
   text-align: center;
-  padding-top: 9.75rem; }
+  padding-top: 6rem; }
   .team-works .button {
     color: white;
     border-color: white;
@@ -7950,7 +7988,7 @@ p.p1 a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 3rem 0.75rem 0; }
+  margin: 1.5rem 0.75rem 0; }
   .contact-item a {
     display: block; }
   .contact-item .icon {

@@ -1,4 +1,5 @@
-.gallery {
+.gallery,
+.responsive-embed {
   @include breakpoint(xlarge) {
     // display: flex;
     // flex-flow: column wrap;
@@ -6,6 +7,9 @@
     width: rem-calc(672);
     margin-left: rem-calc(-132);
   }
+}
+.responsive-embed {
+  min-height: 380px;
 }
 .gallery-item {
   background-color: #eee;

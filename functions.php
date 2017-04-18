@@ -133,3 +133,7 @@ function show_post($path) {
   echo '<h2 class="team-name">'.$title.'</h2>';
   echo $content;
 }
+
+function empty_content($str) {
+  return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+}
