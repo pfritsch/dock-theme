@@ -16,10 +16,11 @@
     padding: 1rem;
     a {
       color: $white;
-      font-weight: 600;
-      font-size: rem-calc(18);
+      font-size: rem-calc(20);
       opacity: .75;
       margin: rem-calc(24 0);
+      text-transform: uppercase;
+      letter-spacing: rem-calc(1);
     }
     .is-accordion-submenu-parent > a::after {
       display: block;
@@ -47,14 +48,14 @@
   line-height: 0;
 
   .menu a {
-    text-transform: uppercase;
-    font-weight: bold;
     height: rem-calc(56);
-    font-size: rem-calc(14);
+    font-size: rem-calc(20);
     line-height: rem-calc(56);
     border-bottom: 2px solid transparent;
     color: $dark-gray;
     transition: all 200ms ease;
+    text-transform: uppercase;
+    letter-spacing: rem-calc(1);
     margin-left: 12px;
 
     @include breakpoint(large) {
@@ -74,20 +75,6 @@
 .logo {
   float: left;
   transform-origin: 0% 50%;
-  #sda,
-  #schre,
-  #architectes {
-    opacity: 0;
-  }
-  #do,
-  #sda {
-    transform: translate(0, 15px);
-  }
-  #ck,
-  #schre,
-  #architectes {
-    transform: translate(0, -15px);
-  }
   @include breakpoint(large) {
     #sda,
     #schre,
@@ -123,10 +110,9 @@
     left: 0;
     height: 56px;
     padding: 0;
-    background: white; //rgba(#fff, 0.9);
+    background: white;
     z-index: 999;
     opacity: 0.7;
-    // box-shadow: 0 0 3px rgba($black, 0.3);
     transition: opacity 500ms ease;
 
     & + * {

@@ -21,14 +21,23 @@
     margin-left: 0;
   }
   @include breakpoint(xlarge) {
-    @include grid-column-offset(2);
+    margin-left: rem-calc(108);
   }
 
   .entry-content {
     position: relative;
   }
   .entry-content ul:not(.image-gallery) {
+    list-style-type: none;
+    padding-left: 24px;
     @include breakpoint(xlarge) {
+      padding: 0;
+      margin-left: rem-calc(-33);
+      li {
+        padding-left: rem-calc(33);
+      }
+    }
+    @include breakpoint(xxlarge) {
       position: absolute;
       top: 0;
       left: -240px;
@@ -60,7 +69,7 @@
       margin-left: 0;
     }
     @include breakpoint(xlarge) {
-      @include grid-column-offset(2);
+      margin-left: rem-calc(108);
     }
   }
   .post-title {

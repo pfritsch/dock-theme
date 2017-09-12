@@ -47,7 +47,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1008);
+$global-width: rem-calc(996);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1E2324,
@@ -64,7 +64,7 @@ $white: #fff;
 $outer-space: $dark-gray;
 $body-background: $black;
 $body-font-color: $black;
-$body-font-family: 'Nunito Sans', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+$body-font-family: 'AbadiMT-Condensed', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -82,10 +82,10 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 456px,
-  large: 672px,
-  xlarge: 996px,
-  xxlarge: 1280px,
+  medium: 720px,
+  large: 980px,
+  xlarge: 1280px,
+  xxlarge: 1440px,
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
@@ -119,12 +119,12 @@ $header-styles: (
     'h6': ('font-size': 12),
   ),
   medium: (
-    'h1': ('font-size': 32),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 18),
-    'h4': ('font-size': 16),
-    'h5': ('font-size': 16),
-    'h6': ('font-size': 14),
+    'h1': ('font-size': 36),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 22),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 18),
   ),
 );
 $header-text-rendering: optimizeLegibility;
