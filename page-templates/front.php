@@ -35,31 +35,17 @@ get_header(); ?>
  endwhile;
 endif; ?>
 
+
+<!-- Posts list -->
+<?php get_template_part( 'template-parts/news' ); ?>
+
+
 <!-- Projects List -->
 <?php get_template_part( 'template-parts/projects-list' ); ?>
+
+<!-- Filters -->
 <?php get_template_part( 'template-parts/filters' ); ?>
 
-
-<?php global $post;
-	$args = array( 'posts_per_page' => 4 );
-	$myposts = get_posts( $args );
-	if ( !empty($myposts) ) : ?>
-	<section class="news-list">
-		<div class="row">
-			<div class="main-content">
-				<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-					<article class="news post-content">
-						<a href="<?php the_permalink(); ?>">
-							<h2 class="news-title post-title"><?php the_title(); ?></h2>
-							<span class="news-date"><?php echo get_the_date(); ?></span>
-						</a>
-					</article>
-				<?php endforeach; ?>
-				<?php wp_reset_postdata(); ?>
-			</div>
-		</div>
-	</section>
-<?php endif; ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 <?php get_footer();

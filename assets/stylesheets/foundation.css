@@ -5468,47 +5468,68 @@ body#tinymce {
             transform: scale3d(1.25, 1.25, 1.25); }
 
 .news-list {
-  padding: 1.5rem 0 3rem; }
+  padding: 0 0 3rem; }
   @media print, screen and (min-width: 45em) {
     .news-list {
-      padding: 3.75rem 0 6rem; } }
+      padding: 0 0 6rem; } }
+  .news-list .news-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 6px;
+    padding-right: 6px; }
   .news-list .news {
-    margin-top: 1.125rem; }
+    max-width: 50%;
+    width: 328px; }
     @media print, screen and (min-width: 45em) {
       .news-list .news {
-        margin-top: 3.75rem; } }
-    .news-list .news:first-child {
-      margin-top: 0; }
-  .news-list .post-content {
-    position: relative;
-    margin-left: 0; }
+        max-width: 33%; } }
     @media screen and (min-width: 80em) {
-      .news-list .post-content {
-        margin-left: 16.66667%; } }
+      .news-list .news {
+        max-width: 50%; } }
+  .news-list figure {
+    margin-bottom: 12px; }
   .news-list .post-title {
     margin-bottom: 0; }
-  .news-list a {
+  .news-list a.news-link {
     display: block;
     -webkit-transition: all 300ms ease;
-    transition: all 300ms ease; }
-    @media screen and (min-width: 80em) {
-      .news-list a::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 18px;
-        left: -57px;
-        width: 7px;
-        height: 7px;
-        background: #B7BBBD;
-        border-radius: 50%;
-        -webkit-transition: all 300ms ease;
-        transition: all 300ms ease; }
-      .news-list a:hover::after {
-        background: #8DA416; } }
+    transition: all 300ms ease;
+    border: 1px solid #E9EAEB;
+    padding: 12px;
+    margin: 0 6px 12px;
+    background-color: white; }
 
 .news-date {
   color: #B7BBBD; }
+
+.news-thumbnail {
+  width: 100%;
+  float: left;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
+  .news-thumbnail:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 45em) {
+    .news-thumbnail {
+      width: 83.33333%;
+      float: left;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+      margin-left: 8.33333%; }
+      .news-thumbnail:last-child:not(:first-child) {
+        float: right; } }
+  @media screen and (min-width: 80em) {
+    .news-thumbnail {
+      width: 100%;
+      float: left;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+      margin-left: 0%; }
+      .news-thumbnail:last-child:not(:first-child) {
+        float: right; } }
 
 @media screen and (min-width: 80em) {
   .gallery,

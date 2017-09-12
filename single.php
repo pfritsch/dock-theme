@@ -8,8 +8,13 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
-
+<?php if ( has_post_thumbnail() ) { ?>
+  <div class="row">
+    <figure class="news-thumbnail">
+      <?php the_post_thumbnail('thumbnail'); ?>
+    </figure>
+  </div>
+<?php } ?>
 <main id="single-post" role="main">
 	<div class="main-content">
 		<?php do_action( 'foundationpress_before_content' ); ?>

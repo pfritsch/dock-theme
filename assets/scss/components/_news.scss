@@ -1,51 +1,51 @@
 .news-list {
-  padding: rem-calc(24 0 48);
+  padding: rem-calc(0 0 48);
   @include breakpoint(medium) {
-    padding: rem-calc(60 0 96);
+    padding: rem-calc(0 0 96);
+  }
+  .news-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 6px;
+    padding-right: 6px;
   }
   .news {
-    margin-top: rem-calc(18);
+    max-width: 50%;
+    width: 328px;
     @include breakpoint(medium) {
-      margin-top: rem-calc(60);
-    }
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  .post-content {
-    position: relative;
-    @include breakpoint(small) {
-      margin-left: 0;
+      max-width: 33%;
     }
     @include breakpoint(xlarge) {
-      @include grid-column-offset(2);
+      max-width: 50%;
     }
+  }
+  figure {
+    margin-bottom: 12px;
   }
   .post-title {
     margin-bottom: 0;
   }
-  a {
+  a.news-link {
     display: block;
     transition: all 300ms ease;
-    @include breakpoint(xlarge) {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 18px;
-        left: -57px;
-        width: 7px;
-        height: 7px;
-        background: $medium-gray;
-        border-radius: 50%;
-        transition: all 300ms ease;
-      }
-      &:hover::after {
-        background: $secondary-color;
-      }
-    }
+    border: 1px solid $light-gray;
+    padding: 12px;
+    margin: 0 6px 12px;
+    background-color: white;
   }
 }
 .news-date {
   color: $medium-gray;
+}
+.news-thumbnail {
+  @include grid-column(12);
+  @include breakpoint(medium) {
+    @include grid-column(10);
+    @include grid-column-offset(1);
+  }
+  @include breakpoint(xlarge) {
+    @include grid-column(12);
+    @include grid-column-offset(0);
+  }
+
 }
