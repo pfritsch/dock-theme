@@ -19,10 +19,10 @@ get_header(); ?>
 	<?php get_template_part( 'template-parts/filters' ); ?>
 
 	<?php if ( have_posts() ) : ?>
-		
+
 		<section id="portfolio" class="portfolio-grid">
-			<div class="row">
-				<div class="main-content">
+			<div class="expanded row">
+				<div class="grid-container">
 					<?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => -1 ) ); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'template-parts/project-item' ); ?>
@@ -30,9 +30,6 @@ get_header(); ?>
 				</div>
 			</div>
 		</section>
-		<?php //get_template_part( 'template-parts/content', get_post_format() ); ?>
-
-
 		<?php else : ?>
 			<main id="page" role="main">
 				<div class="main-content">
@@ -40,20 +37,5 @@ get_header(); ?>
 				</div>
 			</main>
 		<?php endif; // End have_posts() check. ?>
-
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php
-		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
-		elseif ( is_paged() ) :
-		?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php endif; ?>
-
-	<?php /*get_sidebar(); */ ?>
-
 
 <?php get_footer();
