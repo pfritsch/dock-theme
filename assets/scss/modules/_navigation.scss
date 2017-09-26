@@ -153,45 +153,46 @@
 }
 
 .nav-previous { float:left; }
-.nav-next { float:right; }
+.nav-next { float:right; text-align: right; }
 
 .nav-links {
   padding: rem-calc(24 0 96);
 
-  div {
+  .nav-previous,
+  .nav-next {
     position: relative;
-    max-width: 45%;
+    width: 45%;
     padding-top: rem-calc(24);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     a {
+      display: block;
       opacity: 0.5;
       &:hover,
       &:focus {
         opacity: 1;
       }
     }
-
-    &.nav-previous::before {
-      content: "Projet précédent";
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      left: 0;
-      font-size: rem-calc(12);
-      color: $medium-gray;
-      text-transform: uppercase;
-    }
-    &.nav-next::after {
-      content: "Projet suivant";
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      right: 0;
-      font-size: rem-calc(12);
-      color: $medium-gray;
-      text-transform: uppercase;
-    }
+  }
+  .nav-previous::before {
+    content: "Projet précédent";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-size: rem-calc(12);
+    color: $medium-gray;
+    text-transform: uppercase;
+  }
+  .nav-next::after {
+    content: "Projet suivant";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    font-size: rem-calc(12);
+    color: $medium-gray;
+    text-transform: uppercase;
   }
 }

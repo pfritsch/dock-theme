@@ -5036,39 +5036,45 @@ a.thumbnail {
   float: left; }
 
 .nav-next {
-  float: right; }
+  float: right;
+  text-align: right; }
 
 .nav-links {
   padding: 1.5rem 0 6rem; }
-  .nav-links div {
+  .nav-links .nav-previous,
+  .nav-links .nav-next {
     position: relative;
-    max-width: 45%;
+    width: 45%;
     padding-top: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-    .nav-links div a {
+    .nav-links .nav-previous a,
+    .nav-links .nav-next a {
+      display: block;
       opacity: 0.5; }
-      .nav-links div a:hover, .nav-links div a:focus {
+      .nav-links .nav-previous a:hover, .nav-links .nav-previous a:focus,
+      .nav-links .nav-next a:hover,
+      .nav-links .nav-next a:focus {
         opacity: 1; }
-    .nav-links div.nav-previous::before {
-      content: "Projet précédent";
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      left: 0;
-      font-size: 0.75rem;
-      color: #B7BBBD;
-      text-transform: uppercase; }
-    .nav-links div.nav-next::after {
-      content: "Projet suivant";
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      right: 0;
-      font-size: 0.75rem;
-      color: #B7BBBD;
-      text-transform: uppercase; }
+  .nav-links .nav-previous::before {
+    content: "Projet précédent";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-size: 0.75rem;
+    color: #B7BBBD;
+    text-transform: uppercase; }
+  .nav-links .nav-next::after {
+    content: "Projet suivant";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    font-size: 0.75rem;
+    color: #B7BBBD;
+    text-transform: uppercase; }
 
 .footer-container {
   max-width: 100%;
@@ -5920,50 +5926,65 @@ p.p1 a {
   font-size: 2rem;
   font-weight: normal; }
 
+.team-content {
+  padding-bottom: 2.25rem; }
+  @media print, screen and (min-width: 45em) {
+    .team-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media screen and (min-width: 80em) {
+    .team-content {
+      margin-left: 6.75rem; } }
+
 .team-member {
-  margin: 2.25rem 0;
-  padding: 0.75rem 1.5rem; }
-  @media screen and (min-width: 80em) {
+  margin: 3rem 0 1.5rem 1.5rem;
+  /* margin: rem-calc(36 0);
+  padding: rem-calc(12 24);
+
+  @include breakpoint(xlarge) {
+    background: transparent;
+    box-shadow: 0;
+    transition: background 300ms ease;
+    &.is-hover {
+      background-color: white;
+      transition: box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
+      box-shadow: 1px 1px 6px rgba($black, 0.1);
+    }
+  } */ }
+  @media print, screen and (min-width: 45em) {
     .team-member {
-      background: transparent;
-      -webkit-box-shadow: 0;
-              box-shadow: 0;
-      -webkit-transition: background 300ms ease;
-      transition: background 300ms ease; }
-      .team-member.is-hover {
-        background-color: white;
-        -webkit-transition: -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
-        transition: -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
-        transition: box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
-        transition: box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1), -webkit-box-shadow 700ms cubic-bezier(0.6, 0.2, 0.1, 1);
-        -webkit-box-shadow: 1px 1px 6px rgba(30, 35, 36, 0.1);
-                box-shadow: 1px 1px 6px rgba(30, 35, 36, 0.1); } }
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .team-member[data-member="leonard"] {
+        margin-left: 0; } }
 
-@media screen and (min-width: 80em) {
-  .team-content {
-    float: right;
-    width: 60%; } }
-
-.team-photo {
+/* .team-photo {
   opacity: 0.7;
-  -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
-  max-width: 50%; }
-  @media screen and (min-width: 80em) {
-    .team-photo {
-      height: auto; }
-      .team-photo.is-hover {
-        opacity: 1; }
-      .team-photo[data-member="leonard"] {
-        margin-left: -8.4375rem;
-        float: left; }
-      .team-photo[data-member="sylvain"] {
-        float: left; } }
+  max-width: 50%;
 
+  @include breakpoint(xlarge) {
+    height: auto;
+    &.is-hover {
+      opacity: 1;
+    }
+    &[data-member="leonard"] {
+      margin-left: rem-calc(-135);
+      float: left;
+    }
+    &[data-member="sylvain"] {
+      float: left;
+    }
+  }
+}
 .team-pictures {
   line-height: 0;
-  font-size: 0; }
-
+  font-size: 0;
+} */
 .team-works {
   display: block;
   min-height: 15rem;

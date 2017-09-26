@@ -56,10 +56,7 @@ endif; ?>
           <?php show_post('sylvain-schreck'); ?>
         </article>
       </div>
-			<div class="team-pictures">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-leo.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="leonard" />
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-sylvain.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="sylvain"/>
-			</div>
+			<?php /*<div class="team-pictures"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-leo.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="leonard" /><img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-sylvain.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="sylvain"/></div> */ ?>
     </div>
   </div>
 </section>
