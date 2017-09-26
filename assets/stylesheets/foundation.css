@@ -5330,24 +5330,11 @@ body#tinymce {
       opacity: 0.95; }
 
 .portfolio-grid {
-  background: #E9EAEB;
-  padding: 0 1.5rem 3.75rem;
-  /* .portfolio-item {
-    margin-bottom: rem-calc(12);
-    max-width: 33%;
-  } */
-  /* .post-title {
-    padding-bottom: 0;
-  } */ }
-  @media print, screen and (min-width: 45em) {
-    .portfolio-grid {
-      padding: 0 3.75rem 3.75rem; } }
+  background: #E9EAEB; }
   @media print, screen and (min-width: 45em) {
     .portfolio-grid .grid-container > .portfolio-item {
       float: left;
-      width: 50%;
-      padding-right: 0.75rem;
-      padding-left: 0.75rem; }
+      width: 50%; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(1n) {
         clear: none; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(2n+1) {
@@ -5357,9 +5344,7 @@ body#tinymce {
   @media print, screen and (min-width: 61.25em) {
     .portfolio-grid .grid-container > .portfolio-item {
       float: left;
-      width: 33.33333%;
-      padding-right: 0.75rem;
-      padding-left: 0.75rem; }
+      width: 33.33333%; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(1n) {
         clear: none; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(3n+1) {
@@ -5369,15 +5354,39 @@ body#tinymce {
   @media screen and (min-width: 90em) {
     .portfolio-grid .grid-container > .portfolio-item {
       float: left;
-      width: 25%;
-      padding-right: 0.75rem;
-      padding-left: 0.75rem; }
+      width: 25%; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(1n) {
         clear: none; }
       .portfolio-grid .grid-container > .portfolio-item:nth-of-type(4n+1) {
         clear: both; }
       .portfolio-grid .grid-container > .portfolio-item:last-child {
         float: left; } }
+  .portfolio-grid .post-title {
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease; }
+  .portfolio-grid .post-link {
+    display: block;
+    outline: 1px solid red; }
+  .portfolio-grid .post-content {
+    padding: 12px 18px;
+    background: white; }
+    @media print, screen and (min-width: 45em) {
+      .portfolio-grid .post-content {
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+        position: absolute;
+        opacity: 0;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        padding-bottom: 0; } }
+  .portfolio-grid .portfolio-item {
+    position: relative;
+    overflow: hidden; }
+  @media print, screen and (min-width: 45em) {
+    .portfolio-grid .portfolio-item:hover .post-content {
+      opacity: 1;
+      bottom: 0; } }
 
 .entry-content {
   margin-bottom: 1.5rem; }
@@ -5565,7 +5574,7 @@ body#tinymce {
   .gallery,
   .responsive-embed {
     margin-top: 3.75rem;
-    width: 42rem;
+    width: 100%;
     margin-left: -8.25rem; } }
 
 .responsive-embed {
@@ -5574,7 +5583,7 @@ body#tinymce {
 .gallery-item {
   background-color: #eee;
   display: inline-block;
-  margin: 0 0 1.5rem 0; }
+  margin: 0 1.5rem 1.5rem 0; }
   @media screen and (min-width: 80em) {
     .gallery-item {
       max-width: 100%;
