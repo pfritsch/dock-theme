@@ -15,11 +15,10 @@
 
 get_header(); ?>
 
+<?php /* ?>
 <div id="page" role="main">
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
-
-		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 		<?php endwhile; ?>
@@ -29,7 +28,6 @@ get_header(); ?>
 
 		<?php endif; // End have_posts() check. ?>
 
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php
 		if ( function_exists( 'foundationpress_pagination' ) ) :
 			foundationpress_pagination();
@@ -45,5 +43,16 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 </div>
+<?php */ ?>
+
+<?php do_action( 'foundationpress_before_content' ); ?>
+
+<!-- Posts list -->
+<?php get_template_part( 'template-parts/news' ); ?>
+
+<!-- Projects List -->
+<?php get_template_part( 'template-parts/projects-list' ); ?>
+
+<?php do_action( 'foundationpress_after_content' ); ?>
 
 <?php get_footer();

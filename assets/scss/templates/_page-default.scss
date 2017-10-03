@@ -21,7 +21,8 @@
 .page-template-front,
 .projet-template-default,
 .post-template-default,
-.archive {
+.archive,
+.blog {
   .off-canvas-wrapper::before {
     @include breakpoint(xlarge) {
       content: '';

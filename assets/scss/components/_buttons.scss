@@ -1,6 +1,6 @@
 .sites-button {
   background: #FF6908;
-  font-size: 1.25rem;
+  font-size: rem-calc(16);
   font-weight: bold;
   box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
   border-radius: 3px;
@@ -8,12 +8,18 @@
 }
 .footer .button {
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: rem-calc(14);
+  font-size: rem-calc(16);
   line-height: rem-calc(24);
-  padding: rem-calc(12 24);
-  border: none;
+  padding: rem-calc(14 23 10);
   margin: 0;
+  border-color: $light-gray;
+  color: $light-gray;
+
+  &:hover,
+  &:focus {
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
 }
 .button-facebook {
   display: inline-block;

@@ -2,6 +2,11 @@
   <div class="row">
     <div class="main-content">
       <ul class="filters-list categories">
+        <li class="filter-item<?php if( is_page('projets')) echo ' current-cat'; ?>">
+          <a href="<?php echo get_permalink( get_page_by_path( 'projets' )); ?>">
+            <span>Tous les projets</span>
+          </a>
+        </li>
         <?php
           $args = array(
           'orderby' => 'slug',
@@ -18,7 +23,7 @@
             ?>
             <li class="filter-item<?php if($current_categoryID == $category->term_id) echo ' current-cat'; ?>">
               <a href="<?php echo esc_url($url) ?>">
-                <svg class="icon is-inline"><use xlink:href="#icon-<?php echo $category->slug; ?>" /></svg>
+                <!-- <svg class="icon is-inline"><use xlink:href="#icon-<?php echo $category->slug; ?>" /></svg> -->
                 <span><?php echo $category->name; ?></span>
               </a>
             </li>

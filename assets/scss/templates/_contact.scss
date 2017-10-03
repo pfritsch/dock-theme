@@ -1,5 +1,6 @@
 .contact-container {
-  background: #F0F1F3;
+  background: $black;
+  color: $light-gray;
 
   & > .row {
     position: relative;
@@ -31,6 +32,11 @@
 
   a {
     display: block;
+    color: $light-gray;
+  }
+  a:hover,
+  a:focus {
+    color: $secondary-color;
   }
   .icon {
     transition: transform 300ms cubic-bezier(0.6, 0.2, 0.1, 1);
@@ -38,6 +44,9 @@
   }
   a:hover .icon {
     transform: scale3d(1.25, 1.25, 1.25);
+  }
+  strong {
+    font-weight: 300;
   }
 }
 .contact-item-category {

@@ -8,4 +8,13 @@
 			<?php wp_reset_postdata(); ?>
 		</div>
 	</div>
+  <div class="row">
+    <div class="main-content">
+      <p class="text-center">
+        <a href="<?php echo get_permalink( get_page_by_path( 'projets' )); ?>" class="button hollow  portfolio-button">
+          <span>Voir tous les projets</span>
+        </a>
+      </p>
+    </div>
+  </div>
 </section>

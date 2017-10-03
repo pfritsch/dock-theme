@@ -15,9 +15,6 @@
     @include breakpoint(medium) {
       max-width: 33%;
     }
-    @include breakpoint(xlarge) {
-      max-width: 50%;
-    }
   }
   figure {
     margin-bottom: 12px;
@@ -36,6 +33,7 @@
 }
 .news-date {
   color: $medium-gray;
+  font-size: rem-calc(14);
 }
 .news-thumbnail {
   @include grid-column(12);

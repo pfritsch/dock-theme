@@ -1,12 +1,15 @@
 .entry-content {
   margin-bottom: rem-calc(24);
   @include breakpoint(medium) {
-   margin-bottom: rem-calc(60);
+   margin-bottom: rem-calc(48);
   }
   p, ul, li {
     @include breakpoint(large) {
-      line-height: rem-calc(36);
+      line-height: 24px;
     }
+  }
+  li {
+    margin-bottom: 12px;
   }
 }
 .entry-content ul:not(.image-gallery) li {
@@ -27,5 +30,5 @@
   }
 }
 .entry-title {
-  font-weight: normal;
+  font-weight: 300;
 }

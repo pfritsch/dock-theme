@@ -23,7 +23,7 @@
    </div>
 </main>
 
-<?php get_template_part( 'template-parts/filters' ); ?>
 <?php get_template_part( 'template-parts/projects-grid' ); ?>
+<?php get_template_part( 'template-parts/filters' ); ?>
 
 <?php get_footer();

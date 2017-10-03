@@ -49,11 +49,11 @@ endif; ?>
   <div class="row">
     <div class="team main-content">
       <div class="team-content">
-        <article class="team-member" data-member="leonard">
-          <?php show_post('leonard-dosda'); ?>
-        </article>
         <article class="team-member" data-member="sylvain">
           <?php show_post('sylvain-schreck'); ?>
+        </article>
+        <article class="team-member" data-member="leonard">
+          <?php show_post('leonard-dosda'); ?>
         </article>
       </div>
 			<?php /*<div class="team-pictures"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-leo.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="leonard" /><img src="<?php echo get_template_directory_uri(); ?>/assets/images/team-sylvain.jpg" width="190" height="589" alt="La team" class="team-photo" data-member="sylvain"/></div> */ ?>

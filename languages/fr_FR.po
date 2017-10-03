@@ -195,7 +195,7 @@ msgstr "Pages"
 #: ../library/entry-meta.php:4
 #, php-format
 msgid "Posted on %1$s at %2$s."
-msgstr "Posté le %1$s à %2$s."
+msgstr "Posté le %1$s"
 
 #: ../library/entry-meta.php:5
 msgid "Written by"

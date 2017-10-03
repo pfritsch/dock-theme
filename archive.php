@@ -16,7 +16,6 @@
  */
 
 get_header(); ?>
-	<?php get_template_part( 'template-parts/filters' ); ?>
 
 	<?php if ( have_posts() ) : ?>
 
@@ -37,5 +36,7 @@ get_header(); ?>
 				</div>
 			</main>
 		<?php endif; // End have_posts() check. ?>
+
+    	<?php get_template_part( 'template-parts/filters' ); ?>
 
 <?php get_footer();
